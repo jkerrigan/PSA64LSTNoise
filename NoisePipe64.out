@@ -1,0 +1,589 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12320056
+##  Job Name : NoisePipe
+##  Nodelist : smp015
+##      CPUs : 20
+##  Mem/Node : 40960 MB
+## Directory : /gpfs_home/jkerriga/PSA64Noise
+##   Started : Wed Mar 23 20:51:47 EDT 2016
+###############################################################################
+discarding /users/jkerriga/anaconda/bin from PATH
+prepending /users/jkerriga/anaconda/envs/PAPER/bin to PATH
+0.000000_0.250000
+Day2: 2
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+242
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+243
+Working on 0.000000_0.250000
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  2 files
+Reading /users/jkerriga/data/jkerriga/zen.2456242.29909.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456242.30605.uvcRREcACOcPBRA
+Writing to ./lst.2456242.30108.17382.uv
+LST: 0:00:43.07 (0.003132)  -> JD: 2456242.30108
+LST: 0:01:26.14 (0.006264)  -> JD: 2456242.30157
+LST: 0:02:09.20 (0.009396)  -> JD: 2456242.30207
+LST: 0:02:52.27 (0.012528)  -> JD: 2456242.30257
+LST: 0:03:35.34 (0.015660)  -> JD: 2456242.30307
+LST: 0:04:18.41 (0.018792)  -> JD: 2456242.30356
+LST: 0:05:01.47 (0.021924)  -> JD: 2456242.30406
+LST: 0:05:44.54 (0.025056)  -> JD: 2456242.30456
+LST: 0:06:27.61 (0.028188)  -> JD: 2456242.30505
+LST: 0:07:10.68 (0.031320)  -> JD: 2456242.30555
+LST: 0:07:53.74 (0.034452)  -> JD: 2456242.30605
+LST: 0:08:36.81 (0.037584)  -> JD: 2456242.30655
+LST: 0:09:19.88 (0.040716)  -> JD: 2456242.30704
+LST: 0:10:02.95 (0.043847)  -> JD: 2456242.30754
+LST: 0:10:46.01 (0.046979)  -> JD: 2456242.30804
+LST: 0:11:29.08 (0.050111)  -> JD: 2456242.30853
+LST: 0:12:12.15 (0.053243)  -> JD: 2456242.30903
+LST: 0:12:55.22 (0.056375)  -> JD: 2456242.30953
+LST: 0:13:38.28 (0.059507)  -> JD: 2456242.31003
+LST: 0:14:21.35 (0.062639)  -> JD: 2456242.31052
+Finished writing lst.2456242.30108.17382.uv
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  3 files
+Reading /users/jkerriga/data/jkerriga/zen.2456243.29218.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456243.29914.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456243.30609.uvcRREcACOcPBRA
+Writing to ./lst.2456243.29814.17387.uv
+LST: 0:00:00.00 (0.000000)  -> JD: 2456243.29814
+LST: 0:00:43.07 (0.003132)  -> JD: 2456243.29864
+LST: 0:01:26.14 (0.006264)  -> JD: 2456243.29914
+LST: 0:02:09.20 (0.009396)  -> JD: 2456243.29963
+LST: 0:02:52.27 (0.012528)  -> JD: 2456243.30013
+LST: 0:03:35.34 (0.015660)  -> JD: 2456243.30063
+LST: 0:04:18.41 (0.018792)  -> JD: 2456243.30112
+LST: 0:05:01.47 (0.021924)  -> JD: 2456243.30162
+LST: 0:05:44.54 (0.025056)  -> JD: 2456243.30212
+LST: 0:06:27.61 (0.028188)  -> JD: 2456243.30262
+LST: 0:07:10.68 (0.031320)  -> JD: 2456243.30311
+LST: 0:07:53.74 (0.034452)  -> JD: 2456243.30361
+LST: 0:08:36.81 (0.037584)  -> JD: 2456243.30411
+LST: 0:09:19.88 (0.040716)  -> JD: 2456243.3046
+LST: 0:10:02.95 (0.043847)  -> JD: 2456243.3051
+LST: 0:10:46.01 (0.046979)  -> JD: 2456243.3056
+LST: 0:11:29.08 (0.050111)  -> JD: 2456243.30609
+LST: 0:12:12.15 (0.053243)  -> JD: 2456243.30659
+LST: 0:12:55.22 (0.056375)  -> JD: 2456243.30709
+LST: 0:13:38.28 (0.059507)  -> JD: 2456243.30759
+LST: 0:14:21.35 (0.062639)  -> JD: 2456243.30808
+Finished writing lst.2456243.29814.17387.uv
+[ 100.          100.49261084  100.98522167  101.47783251  101.97044335
+  102.46305419  102.95566502  103.44827586  103.9408867   104.43349754
+  104.92610837  105.41871921  105.91133005  106.40394089  106.89655172
+  107.38916256  107.8817734   108.37438424  108.86699507  109.35960591
+  109.85221675  110.34482759  110.83743842  111.33004926  111.8226601
+  112.31527094  112.80788177  113.30049261  113.79310345  114.28571429
+  114.77832512  115.27093596  115.7635468   116.25615764  116.74876847
+  117.24137931  117.73399015  118.22660099  118.71921182  119.21182266
+  119.7044335   120.19704433  120.68965517  121.18226601  121.67487685
+  122.16748768  122.66009852  123.15270936  123.6453202   124.13793103
+  124.63054187  125.12315271  125.61576355  126.10837438  126.60098522
+  127.09359606  127.5862069   128.07881773  128.57142857  129.06403941
+  129.55665025  130.04926108  130.54187192  131.03448276  131.5270936
+  132.01970443  132.51231527  133.00492611  133.49753695  133.99014778
+  134.48275862  134.97536946  135.4679803   135.96059113  136.45320197
+  136.94581281  137.43842365  137.93103448  138.42364532  138.91625616
+  139.408867    139.90147783  140.39408867  140.88669951  141.37931034
+  141.87192118  142.36453202  142.85714286  143.34975369  143.84236453
+  144.33497537  144.82758621  145.32019704  145.81280788  146.30541872
+  146.79802956  147.29064039  147.78325123  148.27586207  148.76847291
+  149.26108374  149.75369458  150.24630542  150.73891626  151.23152709
+  151.72413793  152.21674877  152.70935961  153.20197044  153.69458128
+  154.18719212  154.67980296  155.17241379  155.66502463  156.15763547
+  156.65024631  157.14285714  157.63546798  158.12807882  158.62068966
+  159.11330049  159.60591133  160.09852217  160.591133    161.08374384
+  161.57635468  162.06896552  162.56157635  163.05418719  163.54679803
+  164.03940887  164.5320197   165.02463054  165.51724138  166.00985222
+  166.50246305  166.99507389  167.48768473  167.98029557  168.4729064
+  168.96551724  169.45812808  169.95073892  170.44334975  170.93596059
+  171.42857143  171.92118227  172.4137931   172.90640394  173.39901478
+  173.89162562  174.38423645  174.87684729  175.36945813  175.86206897
+  176.3546798   176.84729064  177.33990148  177.83251232  178.32512315
+  178.81773399  179.31034483  179.80295567  180.2955665   180.78817734
+  181.28078818  181.77339901  182.26600985  182.75862069  183.25123153
+  183.74384236  184.2364532   184.72906404  185.22167488  185.71428571
+  186.20689655  186.69950739  187.19211823  187.68472906  188.1773399
+  188.66995074  189.16256158  189.65517241  190.14778325  190.64039409
+  191.13300493  191.62561576  192.1182266   192.61083744  193.10344828
+  193.59605911  194.08866995  194.58128079  195.07389163  195.56650246
+  196.0591133   196.55172414  197.04433498  197.53694581  198.02955665
+  198.52216749  199.01477833  199.50738916]
+lst.2456242.30108.17382.uv --> lst.2456242.30108.17382.uvG
+lst.2456243.29814.17387.uv --> lst.2456243.29814.17387.uvG
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456242.30108.17382.uvG -> lst.2456242.30108.17382.uvGA
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456242.30108.17382.uvG -> lst.2456242.30108.17382.uvGA
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456242.30108.17382.uvG -> lst.2456242.30108.17382.uvGA
+lst.2456243.29814.17387.uvG -> lst.2456243.29814.17387.uvGA
+lst.2456243.29814.17387.uvG -> lst.2456243.29814.17387.uvGA
+lst.2456243.29814.17387.uvG -> lst.2456243.29814.17387.uvGA
+This is Batch Fringe Rate Filter using:
+calfile: psa6240_v003 
+frpad: 1.0
+Checking for Old FRF Data
+ls: cannot access even/sep0,1/*.uvGAL: No such file or directory
+Filtering sep0,1 by selecting ant 0_44 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  0_44 -a 1.0 --frpad  even/sep0,1
+Using normalization for old FRF:  None
+Looking for baselines matching  0_44
+These are the spearations that we are going to use  ['0,1']
+   Reading even/sep0,1/lst.2456242.30108.17382.uvGA
+[42, 63] 0,1 True
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (20)
+Checking for Old FRF Data
+ls: cannot access even/sep1,1/*.uvGAL: No such file or directory
+Filtering sep1,1 by selecting ant 1_3 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  1_3 -a 1.0 --frpad  even/sep1,1
+Using normalization for old FRF:  None
+Looking for baselines matching  1_3
+These are the spearations that we are going to use  ['1,1']
+   Reading even/sep1,1/lst.2456242.30108.17382.uvGA
+[22, 63] 1,1 False
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (20)
+Checking for Old FRF Data
+ls: cannot access even/sep-1,1/*.uvGAL: No such file or directory
+Filtering sep-1,1 by selecting ant 1_48 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  1_48 -a 1.0 --frpad  even/sep-1,1
+Using normalization for old FRF:  None
+Looking for baselines matching  1_48
+These are the spearations that we are going to use  ['-1,1']
+   Reading even/sep-1,1/lst.2456242.30108.17382.uvGA
+[35, 63] -1,1 True
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (20)
+Checking for Old FRF Data
+ls: cannot access odd/sep0,1/*.uvGAL: No such file or directory
+Filtering sep0,1 by selecting ant 0_44 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  0_44 -a 1.0 --frpad  odd/sep0,1
+Using normalization for old FRF:  None
+Looking for baselines matching  0_44
+These are the spearations that we are going to use  ['0,1']
+   Reading odd/sep0,1/lst.2456243.29814.17387.uvGA
+[42, 63] 0,1 True
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (21)
+Checking for Old FRF Data
+ls: cannot access odd/sep1,1/*.uvGAL: No such file or directory
+Filtering sep1,1 by selecting ant 1_3 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  1_3 -a 1.0 --frpad  odd/sep1,1
+Using normalization for old FRF:  None
+Looking for baselines matching  1_3
+These are the spearations that we are going to use  ['1,1']
+   Reading odd/sep1,1/lst.2456243.29814.17387.uvGA
+[22, 63] 1,1 False
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (21)
+Checking for Old FRF Data
+ls: cannot access odd/sep-1,1/*.uvGAL: No such file or directory
+Filtering sep-1,1 by selecting ant 1_48 
+/home/mkolopanis/src/capo/mjk/scripts/frf_filter.py -C psa6240_v003  1_48 -a 1.0 --frpad  odd/sep-1,1
+Using normalization for old FRF:  None
+Looking for baselines matching  1_48
+These are the spearations that we are going to use  ['-1,1']
+   Reading odd/sep-1,1/lst.2456243.29814.17387.uvGA
+[35, 63] -1,1 True
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/frf_filter.py", line 73, in <module>
+    _d[bl][pol][:,ch] = n.convolve(flg*data[bl][pol][:,ch], n.conj(fir[ch,:]), mode='same')
+ValueError: could not broadcast input array from shape (399) into shape (21)
+using config /users/jkerriga/PSA64Noise/pspec_psa64.cfg
+mk_psa64_pspec.sh: /users/jkerriga/anaconda/envs/PAPER/bin/pywhich: /users/jkerriga/anaconda2/envs/PAPER/bin/python: bad interpreter: No such file or directory
+Running 3 pspecs
+Starting work on I
+this is mk_psa64_pspec.sh with
+experiment: PSPEC
+channels: 95_115
+polarization: I
+separation: sep0,1
+Wed Mar 23 20:54:22 EDT 2016
+python /users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py -C psa6240_v003 -b 100 -a cross -c 95_115 -p I --window=none --output=PSPEC/95_115/I/sep0,1 /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep0,1/*242.[3456]*uvGAL /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/odd/sep0,1/*243.[3456]*uvGAL
+### Warning:  Error opening /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep0,1/*242.[3456]*uvGAL, in UVOPEN(old)
+### Fatal Error:  No such file or directory
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py", line 159, in <module>
+Number of even data sets: 1
+Number of odd data sets: 1
+*242.[3456]*uvGAL *243.[3456]*uvGAL
+    uv = a.miriad.UV(dsets.values()[0][0])
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/aipy/miriad.py", line 73, in __init__
+    _miriad.UV.__init__(self, filename, status, corrmode)
+RuntimeError: Runtime error in MIRIAD
+beginning bootstrap: Wed Mar 23 20:54:23 EDT 2016
+Traceback (most recent call last):
+Reading PSPEC/95_115/I/sep0,1/pspec_boot*npz
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_boot.py", line 23, in <module>
+    f = n.load(filename)
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/numpy/lib/npyio.py", line 362, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: 'PSPEC/95_115/I/sep0,1/pspec_boot*npz'
+complete! Wed Mar 23 20:54:23 EDT 2016
+mv: cannot stat `pspec.npz': No such file or directory
+this is mk_psa64_pspec.sh with
+experiment: PSPEC
+channels: 95_115
+polarization: I
+separation: sep-1,1
+Wed Mar 23 20:54:23 EDT 2016
+python /users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py -C psa6240_v003 -b 100 -a cross -c 95_115 -p I --window=none --output=PSPEC/95_115/I/sep-1,1 /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep-1,1/*242.[3456]*uvGAL /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/odd/sep-1,1/*243.[3456]*uvGAL
+### Warning:  Error opening /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep-1,1/*242.[3456]*uvGAL, in UVOPEN(old)
+### Fatal Error:  No such file or directory
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py", line 159, in <module>
+Number of even data sets: 1
+Number of odd data sets: 1
+*242.[3456]*uvGAL *243.[3456]*uvGAL
+    uv = a.miriad.UV(dsets.values()[0][0])
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/aipy/miriad.py", line 73, in __init__
+    _miriad.UV.__init__(self, filename, status, corrmode)
+RuntimeError: Runtime error in MIRIAD
+beginning bootstrap: Wed Mar 23 20:54:24 EDT 2016
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_boot.py", line 23, in <module>
+Reading PSPEC/95_115/I/sep-1,1/pspec_boot*npz
+    f = n.load(filename)
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/numpy/lib/npyio.py", line 362, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: 'PSPEC/95_115/I/sep-1,1/pspec_boot*npz'
+complete! Wed Mar 23 20:54:25 EDT 2016
+mv: cannot stat `pspec.npz': No such file or directory
+this is mk_psa64_pspec.sh with
+experiment: PSPEC
+channels: 95_115
+polarization: I
+separation: sep1,1
+Wed Mar 23 20:54:25 EDT 2016
+python /users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py -C psa6240_v003 -b 100 -a cross -c 95_115 -p I --window=none --output=PSPEC/95_115/I/sep1,1 /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep1,1/*242.[3456]*uvGAL /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/odd/sep1,1/*243.[3456]*uvGAL
+### Warning:  Error opening /users/jkerriga/data/jkerriga/LST/Day2/Day2_2/even/sep1,1/*242.[3456]*uvGAL, in UVOPEN(old)
+### Fatal Error:  No such file or directory
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_v002.py", line 159, in <module>
+Number of even data sets: 1
+Number of odd data sets: 1
+*242.[3456]*uvGAL *243.[3456]*uvGAL
+    uv = a.miriad.UV(dsets.values()[0][0])
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/aipy/miriad.py", line 73, in __init__
+    _miriad.UV.__init__(self, filename, status, corrmode)
+RuntimeError: Runtime error in MIRIAD
+beginning bootstrap: Wed Mar 23 20:54:26 EDT 2016
+Traceback (most recent call last):
+Reading PSPEC/95_115/I/sep1,1/pspec_boot*npz
+  File "/users/jkerriga/capo/mjk/scripts/pspec_cov_boot.py", line 23, in <module>
+    f = n.load(filename)
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/numpy/lib/npyio.py", line 362, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: 'PSPEC/95_115/I/sep1,1/pspec_boot*npz'
+complete! Wed Mar 23 20:54:27 EDT 2016
+mv: cannot stat `pspec.npz': No such file or directory
+waiting on 0 power spectra threads
+power spectrum complete
+averaging power spectra for pols/channels
+Generating plots for 95_115: I
+Multiplying pspec by factor 2.22 for Cov
+['PSPEC/95_115/I/*/pspec.npz']
+Reading PSPEC/95_115/I/*/pspec.npz
+Traceback (most recent call last):
+  File "/users/jkerriga/capo/mjk/scripts/plot_pk_k3pk_zsa_2.py", line 207, in <module>
+    f = n.load(filename)
+  File "/users/jkerriga/anaconda/envs/PAPER/lib/python2.7/site-packages/numpy/lib/npyio.py", line 362, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: 'PSPEC/95_115/I/*/pspec.npz'
+mv: cannot stat `pspec_pk_k3pk.npz': No such file or directory
+mv: cannot stat `pspec.png': No such file or directory
+mv: cannot stat `posterior.png': No such file or directory
+mv: cannot stat `posterior.txt': No such file or directory
+cp: cannot stat `pspec_PSPEC_95_115_I.png': No such file or directory
+cp: cannot stat `posterior_PSPEC_95_115_I.png': No such file or directory
+cp: cannot stat `pspec_PSPEC_95_115_I.npz': No such file or directory
+cp: cannot stat `posterior_PSPEC_95_115_I.txt': No such file or directory
+Day2: 4
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+244
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+245
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+246
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+247
+Working on 0.000000_0.250000
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  5 files
+Reading /users/jkerriga/data/jkerriga/zen.2456244.29210.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456244.29906.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456246.28519.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456246.29215.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456246.29911.uvcRREcACOcPBRA
+Writing to ./lst.2456244.29558.17379.uv
+LST: 0:00:43.07 (0.003132)  -> JD: 2456244.29558
+LST: 0:01:26.14 (0.006264)  -> JD: 2456244.29607
+LST: 0:02:09.20 (0.009396)  -> JD: 2456244.29657
+LST: 0:02:52.27 (0.012528)  -> JD: 2456244.29707
+LST: 0:03:35.34 (0.015660)  -> JD: 2456244.29757
+LST: 0:04:18.41 (0.018792)  -> JD: 2456244.29806
+LST: 0:05:01.47 (0.021924)  -> JD: 2456244.29856
+LST: 0:05:44.54 (0.025056)  -> JD: 2456244.29906
+LST: 0:06:27.61 (0.028188)  -> JD: 2456244.29955
+LST: 0:07:10.68 (0.031320)  -> JD: 2456244.30005
+LST: 0:07:53.74 (0.034452)  -> JD: 2456244.30055
+LST: 0:08:36.81 (0.037584)  -> JD: 2456244.30105
+LST: 0:09:19.88 (0.040716)  -> JD: 2456244.30154
+LST: 0:10:02.95 (0.043847)  -> JD: 2456244.30204
+LST: 0:10:46.01 (0.046979)  -> JD: 2456244.30254
+LST: 0:11:29.08 (0.050111)  -> JD: 2456244.30303
+LST: 0:12:12.15 (0.053243)  -> JD: 2456244.30353
+LST: 0:12:55.22 (0.056375)  -> JD: 2456244.30403
+LST: 0:13:38.28 (0.059507)  -> JD: 2456244.30453
+LST: 0:14:21.35 (0.062639)  -> JD: 2456244.30502
+Finished writing lst.2456244.29558.17379.uv
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  4 files
+Reading /users/jkerriga/data/jkerriga/zen.2456245.29211.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456245.29907.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456247.28524.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456247.29220.uvcRREcACOcPBRA
+Writing to ./lst.2456245.29260.17380.uv
+LST: 0:00:00.00 (0.000000)  -> JD: 2456245.2926
+LST: 0:00:43.07 (0.003132)  -> JD: 2456245.2931
+LST: 0:01:26.14 (0.006264)  -> JD: 2456245.2936
+LST: 0:02:09.20 (0.009396)  -> JD: 2456245.29409
+LST: 0:02:52.27 (0.012528)  -> JD: 2456245.29459
+LST: 0:03:35.34 (0.015660)  -> JD: 2456245.29509
+LST: 0:04:18.41 (0.018792)  -> JD: 2456245.29559
+LST: 0:05:01.47 (0.021924)  -> JD: 2456245.29608
+LST: 0:05:44.54 (0.025056)  -> JD: 2456245.29658
+LST: 0:06:27.61 (0.028188)  -> JD: 2456245.29708
+LST: 0:07:10.68 (0.031320)  -> JD: 2456245.29757
+LST: 0:07:53.74 (0.034452)  -> JD: 2456245.29807
+LST: 0:08:36.81 (0.037584)  -> JD: 2456245.29857
+LST: 0:09:19.88 (0.040716)  -> JD: 2456245.29907
+LST: 0:10:02.95 (0.043847)  -> JD: 2456245.29956
+LST: 0:10:46.01 (0.046979)  -> JD: 2456245.30006
+LST: 0:11:29.08 (0.050111)  -> JD: 2456245.30056
+LST: 0:12:12.15 (0.053243)  -> JD: 2456245.30105
+LST: 0:12:55.22 (0.056375)  -> JD: 2456245.30155
+LST: 0:13:38.28 (0.059507)  -> JD: 2456245.30205
+LST: 0:14:21.35 (0.062639)  -> JD: 2456245.30255
+Finished writing lst.2456245.29260.17380.uv
+[ 100.          100.49261084  100.98522167  101.47783251  101.97044335
+  102.46305419  102.95566502  103.44827586  103.9408867   104.43349754
+  104.92610837  105.41871921  105.91133005  106.40394089  106.89655172
+  107.38916256  107.8817734   108.37438424  108.86699507  109.35960591
+  109.85221675  110.34482759  110.83743842  111.33004926  111.8226601
+  112.31527094  112.80788177  113.30049261  113.79310345  114.28571429
+  114.77832512  115.27093596  115.7635468   116.25615764  116.74876847
+  117.24137931  117.73399015  118.22660099  118.71921182  119.21182266
+  119.7044335   120.19704433  120.68965517  121.18226601  121.67487685
+  122.16748768  122.66009852  123.15270936  123.6453202   124.13793103
+  124.63054187  125.12315271  125.61576355  126.10837438  126.60098522
+  127.09359606  127.5862069   128.07881773  128.57142857  129.06403941
+  129.55665025  130.04926108  130.54187192  131.03448276  131.5270936
+  132.01970443  132.51231527  133.00492611  133.49753695  133.99014778
+  134.48275862  134.97536946  135.4679803   135.96059113  136.45320197
+  136.94581281  137.43842365  137.93103448  138.42364532  138.91625616
+  139.408867    139.90147783  140.39408867  140.88669951  141.37931034
+  141.87192118  142.36453202  142.85714286  143.34975369  143.84236453
+  144.33497537  144.82758621  145.32019704  145.81280788  146.30541872
+  146.79802956  147.29064039  147.78325123  148.27586207  148.76847291
+  149.26108374  149.75369458  150.24630542  150.73891626  151.23152709
+  151.72413793  152.21674877  152.70935961  153.20197044  153.69458128
+  154.18719212  154.67980296  155.17241379  155.66502463  156.15763547
+  156.65024631  157.14285714  157.63546798  158.12807882  158.62068966
+  159.11330049  159.60591133  160.09852217  160.591133    161.08374384
+  161.57635468  162.06896552  162.56157635  163.05418719  163.54679803
+  164.03940887  164.5320197   165.02463054  165.51724138  166.00985222
+  166.50246305  166.99507389  167.48768473  167.98029557  168.4729064
+  168.96551724  169.45812808  169.95073892  170.44334975  170.93596059
+  171.42857143  171.92118227  172.4137931   172.90640394  173.39901478
+  173.89162562  174.38423645  174.87684729  175.36945813  175.86206897
+  176.3546798   176.84729064  177.33990148  177.83251232  178.32512315
+  178.81773399  179.31034483  179.80295567  180.2955665   180.78817734
+  181.28078818  181.77339901  182.26600985  182.75862069  183.25123153
+  183.74384236  184.2364532   184.72906404  185.22167488  185.71428571
+  186.20689655  186.69950739  187.19211823  187.68472906  188.1773399
+  188.66995074  189.16256158  189.65517241  190.14778325  190.64039409
+  191.13300493  191.62561576  192.1182266   192.61083744  193.10344828
+  193.59605911  194.08866995  194.58128079  195.07389163  195.56650246
+  196.0591133   196.55172414  197.04433498  197.53694581  198.02955665
+  198.52216749  199.01477833  199.50738916]
+lst.2456244.29558.17379.uv --> lst.2456244.29558.17379.uvG
+lst.2456245.29260.17380.uv --> lst.2456245.29260.17380.uvG
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456244.29558.17379.uvG -> lst.2456244.29558.17379.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/even/sep-1,1/': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456244.29558.17379.uvG -> lst.2456244.29558.17379.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/even/sep0,1/': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456244.29558.17379.uvG -> lst.2456244.29558.17379.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/even/sep1,1/': No such file or directory
+lst.2456245.29260.17380.uvG -> lst.2456245.29260.17380.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/odd/sep-1,1/': No such file or directory
+lst.2456245.29260.17380.uvG -> lst.2456245.29260.17380.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/odd/sep0,1/': No such file or directory
+lst.2456245.29260.17380.uvG -> lst.2456245.29260.17380.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/odd/sep1,1/': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 90: cd: /users/jkerriga/data/jkerriga/LST/Day2/Day2_4: No such file or directory
+cp: cannot create regular file `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/': Is a directory
+sh: batch_frf_filter.sh: No such file or directory
+cp: cannot create regular file `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/': Is a directory
+sh: mk_psa64_pspec.sh: No such file or directory
+rm: cannot remove `/users/jkerriga/data/jkerriga/LST/Day2/Day2_4/lst*.uv*': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 31: cd: /users/jkerriga/data/jkerriga/LST/Day6: No such file or directory
+Day2: 6
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+246
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+247
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+248
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+249
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+250
+/var/spool/slurmd/job12320056/slurm_script: line 45: [: too many arguments
+251
+Working on 0.000000_0.250000
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  8 files
+Reading /users/jkerriga/data/jkerriga/zen.2456246.28519.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456246.29215.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456246.29911.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456248.27820.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456248.28516.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456248.29212.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456250.27829.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456250.28525.uvcRREcACOcPBRA
+Writing to ./lst.2456246.28967.17384.uv
+LST: 0:00:00.00 (0.000000)  -> JD: 2456246.28967
+LST: 0:00:43.07 (0.003132)  -> JD: 2456246.29016
+LST: 0:01:26.14 (0.006264)  -> JD: 2456246.29066
+LST: 0:02:09.20 (0.009396)  -> JD: 2456246.29116
+LST: 0:02:52.27 (0.012528)  -> JD: 2456246.29166
+LST: 0:03:35.34 (0.015660)  -> JD: 2456246.29215
+LST: 0:04:18.41 (0.018792)  -> JD: 2456246.29265
+LST: 0:05:01.47 (0.021924)  -> JD: 2456246.29315
+LST: 0:05:44.54 (0.025056)  -> JD: 2456246.29364
+LST: 0:06:27.61 (0.028188)  -> JD: 2456246.29414
+LST: 0:07:10.68 (0.031320)  -> JD: 2456246.29464
+LST: 0:07:53.74 (0.034452)  -> JD: 2456246.29513
+LST: 0:08:36.81 (0.037584)  -> JD: 2456246.29563
+LST: 0:09:19.88 (0.040716)  -> JD: 2456246.29613
+LST: 0:10:02.95 (0.043847)  -> JD: 2456246.29663
+LST: 0:10:46.01 (0.046979)  -> JD: 2456246.29712
+LST: 0:11:29.08 (0.050111)  -> JD: 2456246.29762
+LST: 0:12:12.15 (0.053243)  -> JD: 2456246.29812
+LST: 0:12:55.22 (0.056375)  -> JD: 2456246.29861
+LST: 0:13:38.28 (0.059507)  -> JD: 2456246.29911
+LST: 0:14:21.35 (0.062639)  -> JD: 2456246.29961
+Finished writing lst.2456246.28967.17384.uv
+[0.0, 0.06544984694978735]
+Filtering input files for LSTs of interest
+binning  7 files
+Reading /users/jkerriga/data/jkerriga/zen.2456247.28524.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456247.29220.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456249.27825.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456249.28521.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456251.27126.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456251.27822.uvcRREcACOcPBRA
+Reading /users/jkerriga/data/jkerriga/zen.2456251.28518.uvcRREcACOcPBRA
+Writing to ./lst.2456247.28673.17389.uv
+LST: 0:00:00.00 (0.000000)  -> JD: 2456247.28673
+LST: 0:00:43.07 (0.003132)  -> JD: 2456247.28723
+LST: 0:01:26.14 (0.006264)  -> JD: 2456247.28772
+LST: 0:02:09.20 (0.009396)  -> JD: 2456247.28822
+LST: 0:02:52.27 (0.012528)  -> JD: 2456247.28872
+LST: 0:03:35.34 (0.015660)  -> JD: 2456247.28922
+LST: 0:04:18.41 (0.018792)  -> JD: 2456247.28971
+LST: 0:05:01.47 (0.021924)  -> JD: 2456247.29021
+LST: 0:05:44.54 (0.025056)  -> JD: 2456247.29071
+LST: 0:06:27.61 (0.028188)  -> JD: 2456247.2912
+LST: 0:07:10.68 (0.031320)  -> JD: 2456247.2917
+LST: 0:07:53.74 (0.034452)  -> JD: 2456247.2922
+LST: 0:08:36.81 (0.037584)  -> JD: 2456247.2927
+LST: 0:09:19.88 (0.040716)  -> JD: 2456247.29319
+LST: 0:10:02.95 (0.043847)  -> JD: 2456247.29369
+LST: 0:10:46.01 (0.046979)  -> JD: 2456247.29419
+LST: 0:11:29.08 (0.050111)  -> JD: 2456247.29468
+LST: 0:12:12.15 (0.053243)  -> JD: 2456247.29518
+LST: 0:12:55.22 (0.056375)  -> JD: 2456247.29568
+LST: 0:13:38.28 (0.059507)  -> JD: 2456247.29618
+LST: 0:14:21.35 (0.062639)  -> JD: 2456247.29667
+Finished writing lst.2456247.28673.17389.uv
+[ 100.          100.49261084  100.98522167  101.47783251  101.97044335
+  102.46305419  102.95566502  103.44827586  103.9408867   104.43349754
+  104.92610837  105.41871921  105.91133005  106.40394089  106.89655172
+  107.38916256  107.8817734   108.37438424  108.86699507  109.35960591
+  109.85221675  110.34482759  110.83743842  111.33004926  111.8226601
+  112.31527094  112.80788177  113.30049261  113.79310345  114.28571429
+  114.77832512  115.27093596  115.7635468   116.25615764  116.74876847
+  117.24137931  117.73399015  118.22660099  118.71921182  119.21182266
+  119.7044335   120.19704433  120.68965517  121.18226601  121.67487685
+  122.16748768  122.66009852  123.15270936  123.6453202   124.13793103
+  124.63054187  125.12315271  125.61576355  126.10837438  126.60098522
+  127.09359606  127.5862069   128.07881773  128.57142857  129.06403941
+  129.55665025  130.04926108  130.54187192  131.03448276  131.5270936
+  132.01970443  132.51231527  133.00492611  133.49753695  133.99014778
+  134.48275862  134.97536946  135.4679803   135.96059113  136.45320197
+  136.94581281  137.43842365  137.93103448  138.42364532  138.91625616
+  139.408867    139.90147783  140.39408867  140.88669951  141.37931034
+  141.87192118  142.36453202  142.85714286  143.34975369  143.84236453
+  144.33497537  144.82758621  145.32019704  145.81280788  146.30541872
+  146.79802956  147.29064039  147.78325123  148.27586207  148.76847291
+  149.26108374  149.75369458  150.24630542  150.73891626  151.23152709
+  151.72413793  152.21674877  152.70935961  153.20197044  153.69458128
+  154.18719212  154.67980296  155.17241379  155.66502463  156.15763547
+  156.65024631  157.14285714  157.63546798  158.12807882  158.62068966
+  159.11330049  159.60591133  160.09852217  160.591133    161.08374384
+  161.57635468  162.06896552  162.56157635  163.05418719  163.54679803
+  164.03940887  164.5320197   165.02463054  165.51724138  166.00985222
+  166.50246305  166.99507389  167.48768473  167.98029557  168.4729064
+  168.96551724  169.45812808  169.95073892  170.44334975  170.93596059
+  171.42857143  171.92118227  172.4137931   172.90640394  173.39901478
+  173.89162562  174.38423645  174.87684729  175.36945813  175.86206897
+  176.3546798   176.84729064  177.33990148  177.83251232  178.32512315
+  178.81773399  179.31034483  179.80295567  180.2955665   180.78817734
+  181.28078818  181.77339901  182.26600985  182.75862069  183.25123153
+  183.74384236  184.2364532   184.72906404  185.22167488  185.71428571
+  186.20689655  186.69950739  187.19211823  187.68472906  188.1773399
+  188.66995074  189.16256158  189.65517241  190.14778325  190.64039409
+  191.13300493  191.62561576  192.1182266   192.61083744  193.10344828
+  193.59605911  194.08866995  194.58128079  195.07389163  195.56650246
+  196.0591133   196.55172414  197.04433498  197.53694581  198.02955665
+  198.52216749  199.01477833  199.50738916]
+lst.2456246.28967.17384.uv --> lst.2456246.28967.17384.uvG
+lst.2456247.28673.17389.uv --> lst.2456247.28673.17389.uvG
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456246.28967.17384.uvG -> lst.2456246.28967.17384.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_6/even/sep-1,1/': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456246.28967.17384.uvG -> lst.2456246.28967.17384.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_6/even/sep0,1/': No such file or directory
+/var/spool/slurmd/job12320056/slurm_script: line 78: lst.2456242.35278.17382.uvG: command not found
+lst.2456246.28967.17384.uvG -> lst.2456246.28967.17384.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_6/even/sep1,1/': No such file or directory
+lst.2456247.28673.17389.uvG -> lst.2456247.28673.17389.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_6/odd/sep-1,1/': No such file or directory
+lst.2456247.28673.17389.uvG -> lst.2456247.28673.17389.uvGA
+cp: cannot create directory `/users/jkerriga/data/jkerriga/LST/Day2/Day2_6/odd/sep0,1/': No such file or directory
+slurmstepd: *** JOB 12320056 CANCELLED AT 2016-03-23T20:58:22 *** on smp015

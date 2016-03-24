@@ -1,0 +1,99 @@
+#! /bin/bash
+#SBATCH -t 10:00:00 
+#SBATCH --array=2
+#SBATCH -n 10
+#SBATCH --ntasks=10
+#SBATCH --mem=20G                                                                                                              
+#SBATCH -J NoisePipe
+#SBATCH -o NoisePipe64.out
+#SBATCH -e NoisePipe64.out
+##
+source activate PAPER
+start=$SECONDS
+CALFILE=psa6240_v003
+LSTS=`python -c "import numpy as n; hr = 1.0; print ' '.join(['%f_%f' % (d,d+hr/4.) for d in n.arange(0,24.0*hr,hr/4.)])"`       
+          \
+#LSTS=0.000000_0.250000
+MY_LSTS=`~/capo/scripts/pull_args.py $LSTS`
+echo $MY_LSTS
+trap "exit" INT
+
+### Set end  # of days to bin
+nDays=135
+i=$SLURM_ARRAY_TASK_ID
+#i=64
+minDay=242
+scripts=~/capo/scripts
+LSTDir=/users/jkerriga/data/jkerriga/LST
+cd $LSTDir
+#while [ ${i} -le $((${nDays})) ]; do
+    mkdir Day$i
+    echo 'Day: '$i
+    cd $LSTDir/Day$i
+    #### Find how to separate by geometric days #####
+    even=" /users/jkerriga/data/jkerriga/"
+    odd=" /users/jkerriga/data/jkerriga/"
+    lsteven=''
+    lstodd=''
+    #echo $(( $minDay + $i ))
+    ### Build lists for even odd data locations for lst binning
+    for j in $(seq $minDay $(( $minDay + $i -1 ))); do
+	if [ ! -f ~/data/jkerriga/zen.2456${j}.*.uvcRREcACOcPBRA ]; then
+	    echo "No data for Day ${j}"
+	else
+	    echo ${j}
+	    if [ $(($j%2)) -ne 0 ]; then
+		lstodd=$lstodd$odd'zen.*'${j}'.*.*A'
+	    else
+		lsteven=$lsteven$even'zen.*'${j}'.*.*A'
+	    fi
+	fi
+    done
+    #echo $lstodd
+    #echo $lsteven
+    ### Begin to lst bin ###    
+    #echo $MY_LSTS
+    for LST in $MY_LSTS; do
+	echo Working on $LST
+	#echo /usr/global/paper/capo/scripts/lstbin_v02.py -a cross -C ${CALFILE} -s Sun --lst_res=42.95 --lst_rng=$LST --tfile=600 --altmax=0 --stats=all --median --nsig=3 $lsteven
+	$scripts/lstbin_v02.py -a cross -C ${CALFILE} -s Sun --lst_res=42.95 --lst_rng=$LST --tfile=600 --altmax=0 --stats=all --median --nsig=3 $lsteven
+        $scripts/lstbin_v02.py -a cross -C ${CALFILE} -s Sun --lst_res=42.95 --lst_rng=$LST --tfile=600 --altmax=0 --stats=all --median --nsig=3 $lstodd
+    done;
+    
+    ## Apply giannia bandpass filter...check scripts name arguments etc
+    ~/capo/scripts/apply_bandpass_psa64.py -C psa6240_v003 *.uv
+    
+    evenodd='even odd'
+    ## Pull and separate the files
+    for n in $evenodd; do
+	mkdir $n
+	mkdir $n/sep{-1,0,1},1
+	for m in {-1,0,1}; do
+	    bls=$(python /users/jkerriga/capo/mjk/scripts/getbls.py -C psa6240_v003 --sep=${m},1 "/users/jkerriga/data/jkerriga/zen.2456307.61226.uvcRREcACOcPBRA")
+	    if [ ${n} == 'even' ]; then
+		/users/jkerriga/capo/scripts/pull_antpols.py -a ${bls} lst.*[02468].*uvG
+            else
+     		/users/jkerriga/capo/scripts/pull_antpols.py -a ${bls} lst.*[13579].*uvG
+            fi
+	    cp -r *A /users/jkerriga/data/jkerriga/LST/Day${i}/${n}/sep${m},1/
+	    rm -r *A
+	done
+    done
+    
+    ## FRINGE RATE FILTER ##
+    ## Move to Day N directory ##
+    cd ~/data/jkerriga/LST/Day${i}/
+    cp ~/PSA64Noise/batch_frf_filter.sh ~/data/jkerriga/LST/Day${i}/
+    sh batch_frf_filter.sh 
+    cp ~/PSA64Noise/mk_psa64_pspec.sh ~/data/jkerriga/LST/Day${i}/
+    sh mk_psa64_pspec.sh ~/PSA64Noise/pspec_psa64.cfg
+    
+
+
+    ## Go to next geometric day in the series ##
+#    i=$((${i}*2))
+
+#done
+
+duration=$(( SECONDS - start ))
+echo duration
