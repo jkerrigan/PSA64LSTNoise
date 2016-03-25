@@ -1,40 +1,42 @@
 #! /bin/bash
-#SBATCH -t 24:00:00 
-#SBATCH --array=2,4,8,16,32,64
-#SBATCH -n 96
-#SBATCH --ntasks=16
-#SBATCH --mem=90G                                                                                                              
+#SBATCH -t 4:00:00 
+#SBATCH --array=0-126:2
+#SBATCH -n 60
+#SBATCH --ntasks=10
+#SBATCH --mem=40G                                                                                                              
 #SBATCH -J NoisePipe
 #SBATCH -o NoisePipe.out
 #SBATCH -e NoisePipe.out
 ##
 source activate PAPER
+N=2
 start=$SECONDS
 CALFILE=psa6240_v003
 LSTS=`python -c "import numpy as n; hr = 1.0; print ' '.join(['%f_%f' % (d,d+hr/4.) for d in n.arange(0,24.0*hr,hr/4.)])"`       
 #LSTS='0.000000_0.250000 0.250000_0.500000'
 MY_LSTS=`~/capo/scripts/pull_args.py $LSTS`
+#SLURM_ARRAY_TASK_ID=100
 echo $MY_LSTS
 trap "exit" INT
 
 ### Set end  # of days to bin
 nDays=128
 #SLURM_ARRAY_TASK_ID=2
-i=$SLURM_ARRAY_TASK_ID
+i=$N
 #i=2
-minDay=242
+minDay=$(( 242+${SLURM_ARRAY_TASK_ID} ))
 scripts=~/capo/scripts
 #LSTDir=/users/jkerriga/data/jkerriga/LST
 #cd $LSTDir
-while [ ${i} -le $((${nDays})) ]; do
+#while [ ${i} -le $((${nDays})) ]; do
     #LSTDir=/users/jkerriga/data/jkerriga/LST/Day${SLURM_ARRAY_TASK_ID}
-    LSTDir=/users/jkerriga/scratch/Day${SLURM_ARRAY_TASK_ID} 
+    LSTDir=/users/jkerriga/scratch/Day$N
     cd $LSTDir
     #mkdir Day$i
     echo 'Day2:' $i
     #cd $LSTDir/Day$i
-    mkdir Day${SLURM_ARRAY_TASK_ID}_$i
-    cd Day${SLURM_ARRAY_TASK_ID}_$i
+    mkdir Day${N}_${SLURM_ARRAY_TASK_ID}
+    cd Day${N}_${SLURM_ARRAY_TASK_ID}
     #### Find how to separate by geometric days #####
     even=" /users/jkerriga/data/jkerriga/"
     odd=" /users/jkerriga/data/jkerriga/"
@@ -81,23 +83,26 @@ while [ ${i} -le $((${nDays})) ]; do
             else
      		/users/jkerriga/capo/scripts/pull_antpols.py -a ${bls} lst.*[13579].*.*.uvG
             fi
-	    cp -r *A /users/jkerriga/scratch/Day$SLURM_ARRAY_TASK_ID/Day${SLURM_ARRAY_TASK_ID}_${i}/${n}/sep${m},1/
+	    cp -r *A /users/jkerriga/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/${n}/sep${m},1/
 	    rm -r *A
+	    if [ $N == 2  ]; then
+		rm -r /users/jkerriga/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/${n}/sep${m},1/lst.*.6[45]*.17387.uvGA
+	    fi
 	done
     done
     
     ## FRINGE RATE FILTER ##
     ## Move to Day N directory ##
-    cd ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}
-    cp ~/PSA64Noise/batch_frf_filter.sh ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}/
+    cd ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}
+    cp ~/PSA64Noise/batch_frf_filter.sh ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/
     sh batch_frf_filter.sh 
-    cp ~/PSA64Noise/mk_psa64_pspec.sh ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}/
+    cp ~/PSA64Noise/mk_psa64_pspec.sh ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/
     sh mk_psa64_pspec.sh ~/PSA64Noise/pspec_psa64.cfg
-    rm -r ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}/lst*.uv*
-    rm -r ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}/even/sep{-1,0,1},1/lst*.uvGA
-    rm -r ~/scratch/Day${SLURM_ARRAY_TASK_ID}/Day${SLURM_ARRAY_TASK_ID}_${i}/odd/sep{-1,0,1},1/lst*.uvGA
-    i=$(( ${i} + ${SLURM_ARRAY_TASK_ID} ))
-    minDay=$(( ${minDay} + ${SLURM_ARRAY_TASK_ID} ))
+    rm -r ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/lst*.uv*
+    rm -r ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/even/sep{-1,0,1},1/lst*.uvGA
+    rm -r ~/scratch/Day${N}/Day${N}_${SLURM_ARRAY_TASK_ID}/odd/sep{-1,0,1},1/lst*.uvGA
+    #i=$(( ${i} + ${SLURM_ARRAY_TASK_ID} ))
+    #minDay=$(( ${minDay} + ${SLURM_ARRAY_TASK_ID} ))
 done   
 
 
@@ -106,5 +111,5 @@ done
 
 #done
 
-duration=$(( SECONDS - start ))
-echo duration
+#duration=$(( SECONDS - start ))
+#echo duration
