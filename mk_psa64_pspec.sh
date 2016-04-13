@@ -58,8 +58,13 @@ for chan in $chans; do
         if [ ! -e ${poldir}/pspec_${PREFIX}_${chan}_${pol}.png ]; then
             for sep in $seps; do
                 sepdir=${poldir}/${sep}
-                EVEN_FILES=${EVEN_DATAPATH}${sep}/*[02468].[3456]*uvGAL
-                ODD_FILES=${ODD_DATAPATH}${sep}/*[13579].[3456]*uvGAL
+		even=$(python findLSTrng.py ${EVEN_DATAPATH}${sep}/*[02468].*uvGAL)
+                odd=$(python findLSTrng.py ${ODD_DATAPATH}${sep}/*[13579].*uvGAL)
+		
+		EVEN_FILES=$even
+		ODD_FILES=$odd
+                #EVEN_FILES=${EVEN_DATAPATH}${sep}/*[02468].[3456]*uvGAL
+                #ODD_FILES=${ODD_DATAPATH}${sep}/*[13579].[3456]*uvGAL
                 test -e ${sepdir} || mkdir ${sepdir}
                 LOGFILE=`pwd`/${PREFIX}/${chan}_${pol}_${sep}.log
                 echo this is mk_psa64_pspec.sh with  |tee  ${LOGFILE}

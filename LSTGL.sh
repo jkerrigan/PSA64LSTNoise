@@ -1,6 +1,6 @@
 #! /bin/bash
 #SBATCH -t 10:00:00 
-#SBATCH --array=2
+#SBATCH --array=0-126:2
 #SBATCH -n 10
 #SBATCH --ntasks=10
 #SBATCH --mem=20G                                                                                                              
@@ -19,7 +19,7 @@ echo $MY_LSTS
 trap "exit" INT
 
 ### Set end  # of days to bin
-nDays=135
+nDays=128
 i=$SLURM_ARRAY_TASK_ID
 #i=64
 minDay=242
